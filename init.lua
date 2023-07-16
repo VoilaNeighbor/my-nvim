@@ -7,6 +7,9 @@ vim.cmd [[
 	set tabstop=2
 	set shiftwidth=2
 
+	set number
+	set signcolumn=number
+
 	set shell=powershell
 	set shellcmdflag=-command
 	set shellquote=\"
