@@ -37,6 +37,10 @@ local plugins = {
 
 	{
 		'neovim/nvim-lspconfig',
+		dependencies = {
+			-- Load after mason to ensure that LSPs are configured well. Otherwise you might occassionally get "LSP Missing" errors.
+			'williamboman/mason.nvim',
+		},
 		config = function()
 			local lspconfig = require 'lspconfig'
 			lspconfig.lua_ls.setup {
